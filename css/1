@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Дашборд 1. Уровень жизни населения</title>
+  <style type="text/css">
+
+
+.container {
+width: 100%;
+hight:120px;
+
+}
+
+
+.cols{
+width:50%;
+hight:300px;
+float: left;
+
+}
+
+
+.row{
+width:50%;
+hight:600px;
+float: right;
+lenght:600px;
+}
+
+.row1{
+width: 100%;
+hight:300px;
+
+}
+
+  </style> 
+</head>
+<body>
+
+<h1 style="color:#4682B4; text-align:center"> Уровень жизни населения</h1>
+<div class="container">
+
+    <div id="cols" class="cols">
+    <script>
+
+
+
+        Highcharts.chart('cols', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Расходы населения'
+
+            },
+            tooltip: {
+                pointFormat: '{series.name}: {point.percentage:.1f}%'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'blue'
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Brands',
+                colorByPoint: true,
+                data: [{
+                    name: 'Городской округ город Волжский',
+                    y: 1149094400, color: '#0000CD'
+                }, {
+                    name: 'Городской округ город-герой Волгоград',
+                    y: 8613356540,
+                    sliced: true,
+                    selected: true,color: '#4169E1'
+                }, {
+                    name: 'Городской округ Камышин',
+                    y: 481748928, color: '#7FFFD4'
+                }, {
+                    name: 'Городской округ город Михайловка',
+                    y: 245503168,color: '#40E0D0'
+                }, {
+                    name: 'Городской муниципальный район',
+                    y: 198134544,color: '#00CED1'
+                }, {
+                    name: 'Среднеахтубинский муниципальный район',
+                    y: 122294984,color: '#87CEEB'
+                }, {
+                    name: 'Городской округ город Урюпинск',
+                    y: 135891408,color: '#4682B4'
+                }, {
+                    name: 'Жирновский муниципальный район',
+                    y: 158625088,color: '#40E0D0'
+                }, 
+{
+                    name: 'Калачевский муниципальный район',
+                    y: 170567264, color: '#6495ED'
+                }]
+            }]
+        });
+
+    </script>
+</div>
+
+
+
+ 
+  <div id="row" class="row">
+<script>
+        Highcharts.chart('row', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'column'
+            },
+            title: {
+                text: 'Денежные доходы населения'
+
+            },
+            tooltip: {
+                pointFormat: '{series.name}: {point.percentage:.1f}%'
+            },
+            plotOptions: {
+               column: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'blue'
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Города',
+                colorByPoint: true,
+                data: [{
+                    name: 'Городской округ город Волжский',
+                    y:1.2962304e+009, color: '#0000CD'
+                }, {
+                    name: 'Городской округ город-герой Волгоград',
+                    y: 8.97345946e+009,
+
+                    sliced: true,
+                    selected: true,color: '#4169E1'
+                }, {
+                    name: 'Городской округ город Михайловка',
+                    y: 298958176, color: '#7FFFD4'
+                }, {
+                    name: 'Городской округ город Камышин',
+                    y: 508844640,color: '#40E0D0'
+                }, {
+                    name: 'Городищенский муниципальный район',
+                    y: 242621184,color: '#00CED1'
+                }, {
+                    name: 'Калачевский муниципальный район',
+                    y: 215904512,color: '#87CEEB'
+                }, {
+                    name: 'Жирновский муниципальный район',
+                    y: 184137536,color: '#4682B4'
+                }, {
+                    name: 'Среднеахтубинский муниципальный район',
+                    y: 158008080,color: '#40E0D0'
+                }, 
+{
+                    name: 'Калачевский муниципальный район',
+                    y: 170567264, color: '#6495ED'
+                }]
+            }]
+        });
+
+    </script>
+   
+</div>
+
+</div>
+
+ <div id="row1" class="row1">
+<script>
+        Highcharts.chart('row1', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'column'
+            },
+            title: {
+                text: 'Общая численность безработных'
+
+            },
+
+
+            tooltip: {
+                pointFormat: '{series.name}: {point.percentage:.1f}%'
+            },
+
+
+            plotOptions: {
+  
+               column: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'blue'
+                        }
+                    }
+                }
+            },
+
+            series: [{
+                name: 'Города',
+                colorByPoint: true,
+                data: [{
+                    name: 'Городской округ город Волжский',
+                    y: 184120, color: '#0000CD'
+                }, {
+                    name: 'Городской округ город-герой Волгоград',
+                    y: 314685,
+                    sliced: true,
+                    selected: true,color: '#4169E1'
+                }, {
+                    name: 'Городской округ Камышин',
+                    y: 48178, color: '#7FFFD4'
+                }, {
+                    name: 'Городской округ город Михайловка',
+                    y: 24726,color: '#40E0D0'
+                }, {
+                    name: 'Городской муниципальный район',
+                    y: 12412,color: '#00CED1'
+                }, {
+                    name: 'Среднеахтубинский муниципальный район',
+                    y: 23954,color: '#87CEEB'
+                }, {
+                    name: 'Палласовский муниципальный район',
+                    y: 12821,color: '#4682B4'
+                }, {
+                    name: 'Суровикинский муниципальный район',
+                    y: 19258,color: '#40E0D0'
+                }, 
+{
+                    name: 'Калачевский муниципальный район',
+                    y: 31155, color: '#6495ED'
+                }]
+            }]
+        });
+
+    </script>
+   
+
+</div>
+<p><a href="Модуль социально-экономического развития.html">На главную</a></p>
+<p><a href="Дашборд 2.html">Следующий дашборд</a></p>
+</body>
+</html>
